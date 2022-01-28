@@ -1,0 +1,23 @@
+:root {
+    --first-color: white;
+    --second-color: #135875;
+    --third-color: #473566;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-image: url("../photos/background-image.jpg")
+}
+
+body {
+    color: var(--first-color);
+    background-color: var(--third-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: sticky;
+    background-color: black;
+}
