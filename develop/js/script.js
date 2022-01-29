@@ -13,7 +13,7 @@ var getPhoto = function() {
         if (response.ok) {
             response.json().then(function(data) {
             // displayIssues(data);
-                var imagine = document.querySelector("footer");
+                var imagine = document.querySelector("img");
                 imagine.src = data.collection.items[1].links[0].href;
             });
         } else {
