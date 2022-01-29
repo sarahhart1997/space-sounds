@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./develop/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./develop/css/style.css" />
     <title>Space Sounds</title>
-</head>
-<body>
-<!--Header Start-->
+  </head>
+  <body>
+    <!-- Background HTML-->
+    <div class="background-container">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png"
+        alt=""
+      />
+      <div class="stars"></div>
+      <div class="twinkling"></div>
+    </div>
+    <!--Header Start-->
     <header>
-
+      <h1>The Sounds of Space</h1>
+      <!-- need to fix img styling
+        <img
+        src="develop/photos/nasa-logo-web-rgb.png"
+        id="nasa-logo"
+        alt="nasa-logo"
+      />-->
     </header>
-<!--Header End-->
+    <!--Header End-->
 
-<!--Main Section Start-->
+    <!--Main Section Start-->
+    <main>
+      <section>
+        <em>
+          Soaring to the depths of our universe, gallant spacecraft roam the
+          cosmos, snapping images of celestial wonders. Explore the universe and
+          discover our home planet with NASA through a collection of images and
+          sounds from historic spaceflights and current missions.
+        </em>
+      </section>
+      <div class="drop-down">
+        <label for="space-categories">Choose a space category:</label>
+        <select name="space-categories" id="space-categories">
+          <option value="planets">Planets 🪐</option>
+          <option value="moons">Moons 🌕</option>
+          <option value="missions">Missions 🚀</option>
+          <option value="crew">Crew 👩🏼‍🚀</option>
+        </select>
+      </div>
+    </main>
 
-<!--Main Section End-->
+    <!--Main Section End-->
 
-<!--Footer Start-->
-       <!--Footer Start-->
-       <footer>
-        <h2>
-            ❤️ Made with love by Team 6!
-        </h2>
+    <!--Footer Start-->
+    <!--Footer Start-->
+    <footer>
+      <h2>❤️ Made with love by Team 6!</h2>
     </footer>
-<!--Footer End-->
-</body>
+    <!--Footer End-->
+  </body>
 </html>

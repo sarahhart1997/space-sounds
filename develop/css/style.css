@@ -1,23 +1,131 @@
 :root {
-    --first-color: white;
-    --second-color: #135875;
-    --third-color: #473566;
+  --first-color: white;
+  --second-color: #35858b;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-image: url("../photos/background-image.jpg")
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    color: var(--first-color);
-    background-color: var(--third-color);
-    font-family: Arial, Helvetica, sans-serif;
+  color: var(--first-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* https://codepen.io/agoodwin/pen/NMJoER */
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: black
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
+    repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+
+  -moz-animation: move-background 70s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+img {
+  height: 70vh;
+  width: 70vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
 }
 
 header {
-    position: sticky;
-    background-color: black;
+  position: sticky;
+  background-color: black;
+  padding: 10px;
+}
+
+main {
+  position: absolute;
+}
+
+section {
+  margin: 5px 975px 0px 5px;
+}
+
+.drop-down {
+  background-color: var(--second-color);
+  font-size: 25px;
+  padding: 15px;
+  margin: 25px 975px 15px 5px;
+  border-radius: 10px;
+}
+
+select {
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+footer {
+  font-size: 10px;
 }
