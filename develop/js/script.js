@@ -62,9 +62,9 @@ savingToStorage();
 var getYt = function() {
     // format the github api url
     // var apiUrl = "https://youtube.googleapis.com/youtube/v3/search?channelId=UCvp2nA5u8vapl0iC_qDH2cA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc";
-    var apiUrl = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=nasa&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc"
+    var apiUrl = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=juno&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc"
     // var apiUrl = "https://youtube.googleapis.com/youtube/v3/search?channelId=UCjTzujpWCXoUAe5Nk5tkSFA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc";
-
+    console.log(apiUrl);
     // make a get request to url
     fetch(apiUrl).then(function(response) {
     // request was successful
@@ -72,9 +72,15 @@ var getYt = function() {
             response.json().then(function(data) {
             // displayIssues(data);
                 console.log(apiUrl);
-                var videoare = document.querySelector("#new-video");
-                videoare.src = `https://www.youtube.com/embed/${data.items[4].id.videoId}`;
+                var blah = document.createElement("iframe");
+                console.log(blah);
+                var stores = document.querySelector("h2");
+                blah.setAttribute("id","new-video");
+                // var videoare = document.querySelector("#new-video");
+                // console.log(videoare);
+                blah.src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
                 // videoare.src = `https://www.youtube.com/embed/d9uxl_7_nWs`;
+                stores.appendChild(blah);
             });
         } else {
             // if not successful, redirect to homepage
@@ -84,9 +90,11 @@ var getYt = function() {
 };
 
 getYt();
+
 //getting what is in local storage
 var savingToStorage = function(){
     localStorage.getItem(myArr, mySound);
+    // getYt(mySound);
     
 }
 
