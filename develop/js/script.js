@@ -1,9 +1,18 @@
 //TO BE UPDATED WITH QUERY SELECTORS: Set up array
-var arr = ["Saturn in Red","Juno Gets Ready to Shake It","Kepler","Atmosphere","Ganymede Trailing Hemisphere","Titan","Radio","Echo","Rover"];
+var arr =  ["Saturn in Red",
+            "Juno Gets Ready to Shake It",
+            "The Kepler Spacecraft",
+            "Earth Atmosphere Observations",
+            "Ganymede Trailing Hemisphere",
+            "A Wafer of Titan",
+            "Amateur Radio",
+            "Echo Test",
+            "Rover Driving Test"];
 
-var myArr = arr[1]
+var myArr = arr[8]
 
 console.log(myArr);
+console.log(arr.length);
 
 var getPhoto = function() {
     // format the github api url
