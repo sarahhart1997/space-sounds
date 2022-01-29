@@ -1,11 +1,13 @@
 //TO BE UPDATED WITH QUERY SELECTORS: Set up array
-var arr = ["Saturn","Juno","Kepler","Atmosphere","Ganymede","Titan","Radio","Echo","Rover"];
+var arr = ["Saturn in Red","Juno Gets Ready to Shake It","Kepler","Atmosphere","Ganymede Trailing Hemisphere","Titan","Radio","Echo","Rover"];
 
-console.log(arr[4]);
+var myArr = arr[1]
+
+console.log(myArr);
 
 var getPhoto = function() {
     // format the github api url
-    var apiUrl = `https://images-api.nasa.gov/search?q=${arr[4]}`;
+    var apiUrl = `https://images-api.nasa.gov/search?q=${myArr}`;
 
     // make a get request to url
     fetch(apiUrl).then(function(response) {
@@ -14,7 +16,7 @@ var getPhoto = function() {
             response.json().then(function(data) {
             // displayIssues(data);
                 var imagine = document.querySelector("img");
-                imagine.src = data.collection.items[1].links[0].href;
+                imagine.src = data.collection.items[0].links[0].href;
             });
         } else {
             // if not successful, redirect to homepage
