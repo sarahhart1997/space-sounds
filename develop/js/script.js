@@ -11,7 +11,7 @@ var arr = [
     "Rover Driving Test"
 ];
 //TO BE ERASED: Calls index in array (replace with button call)
-var myArr = arr[8]
+var myArr = arr[1]
 //TO BE ERASED: Console logs index string of array
 console.log(myArr);
 console.log(arr.length);
@@ -40,29 +40,24 @@ var getPhoto = function() {
 getPhoto();
 //TO BE UPDATED WITH SOUNDS OR VIDEO NAMES: creates sound array
 sounds = [
-    "Sound 1",
-    "Sound 2",
-    "Sound 3",
-    "Sound 4",
-    "Sound 5",
-    "Sound 6",
-    "Sound 7",
-    "Sound 8",
-    "Sound 9",
+    "saturn",
+    "juno",
+    "kepler",
+    "atmosphere",
+    "ganymede",
+    "titan",
+    "radio",
+    "echo",
+    "rover",
 ]
 //TO BE ERASED: Calls index in array (replace with button call)
-var mySound = sounds[8]
-//saving to Storage function (probably will require parameter)
-var savingToStorage = function(){
-    localStorage.setItem(myArr, mySound);
-}
-//calls saving Storage function
-savingToStorage();
+var mySound = sounds[1];
+console.log(mySound);
 //gets youtube video
-var getYt = function() {
+var getYt = function(sound) {
     // format the github api url
     // var apiUrl = "https://youtube.googleapis.com/youtube/v3/search?channelId=UCvp2nA5u8vapl0iC_qDH2cA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc";
-    var apiUrl = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=juno&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc"
+    var apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${sound}&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc`;
     // var apiUrl = "https://youtube.googleapis.com/youtube/v3/search?channelId=UCjTzujpWCXoUAe5Nk5tkSFA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc";
     console.log(apiUrl);
     // make a get request to url
@@ -89,13 +84,21 @@ var getYt = function() {
     });
 };
 
-getYt();
 
 //getting what is in local storage
-var savingToStorage = function(){
+var loadFromStorage = function(){
     localStorage.getItem(myArr, mySound);
-    // getYt(mySound);
+    console.log(mySound);
+    getYt(mySound);
     
 }
+
+//saving to Storage function (probably will require parameter)
+var savingToStorage = function(){
+    localStorage.setItem(myArr, mySound);
+    loadFromStorage();
+}
+//calls saving Storage function
+savingToStorage();
 
 //TO DO: event listener for image
