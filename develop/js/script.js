@@ -1,4 +1,8 @@
 //TO BE UPDATED WITH QUERY SELECTORS: Set up array
+var num = 7;
+//query selects h2
+var h2El = document.querySelector("h2");
+//TO BE ERASED: array of button names
 var arr = [
     "Saturn in Red",
     "Liftoff Apollo 11",
@@ -11,8 +15,51 @@ var arr = [
     "Rover Driving Test",
     "Frost on Mars"
 ];
-//TO BE ERASED: Calls index in array (replace with button call)
-var myArr = arr[9]
+//sets array of medias
+var myMedias = [
+    {
+        "video":"saturn",
+        "sound":"saturn.mp3"
+    },
+    {
+        "video":"apollo 11",
+        "sound":"apollo11.mp3"
+    },
+    {
+        "video":"kepler",
+        "sound":"kepler_star_KIC12268220C.mp3"
+    },
+    {
+        "video":"complex earth atmosphere",
+        "sound":"atmosphere.mp3"
+    },
+    {
+        "video":"ganymede",
+        "sound":"ganymede.mp3"
+    },
+    {
+        "video":"sputnik",
+        "sound":"sputnik.mp3"
+    },
+    {
+        "video":"stardust",
+        "sound":"stardust.mp3"
+    },
+    {
+        "video":"voyager",
+        "sound":"voyager_jupiter_lightning.mp3"
+    },
+    {
+        "video":"rover",
+        "sound":"roverdriving.mp3"
+    },
+    {
+        "video":"frost on mars",
+        "sound":"Mars-sound.mp3"
+    }
+]
+//TO BE ERASED: Calls index in array (replace with button call) 
+var myArr = arr[num]
 //TO BE ERASED: Console logs index string of array
 console.log(myArr);
 console.log(arr.length);
@@ -39,26 +86,13 @@ var getPhoto = function() {
 };
 //calls function getPhoto
 getPhoto();
-//TO BE UPDATED WITH SOUNDS OR VIDEO NAMES: creates sound array
-sounds = [
-    "saturn",
-    "apollo 11",
-    "kepler",
-    "complex earth atmosphere",
-    "ganymede",
-    "sputnik",
-    "stardust",
-    "voyager",
-    "rover",
-    "frost on mars",
-]
-//TO BE ERASED: Calls index in array (replace with button call)
-var mySound = sounds[9];
-console.log(mySound);
+//TO BE ERASED: probably with switch case or if else statement
+var mediaNum = myMedias[num];
+console.log(mediaNum);
 //gets youtube video
-var getYt = function(sound) {
+var getYt = function(vid) {
     // format the youtube url
-    var apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${sound}&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc`;
+    var apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${vid}&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc`;
     //TO BE ERASED: Console log apiURL variable
     console.log(apiUrl);
     // make a get request to url
@@ -70,8 +104,6 @@ var getYt = function(sound) {
                 var iframeEl = document.createElement("iframe");
                 //console logs iframe
                 console.log(iframeEl);
-                //query selects h2
-                var h2El = document.querySelector("h2");
                 //creates ID for iframe
                 iframeEl.setAttribute("id","new-video");
                 // gives iframe a source
@@ -85,23 +117,38 @@ var getYt = function(sound) {
         }  
     });
 };
-
+//get audio function
+var getAudio = function(aud){
+    //creates audio
+    var soundEl = document.createElement("audio");
+    //gives audio attributes (may add id and/or class)
+    soundEl.controls = "controls";
+    soundEl.src = `./develop/sounds/${aud}`;
+    soundEl.type = "audio/mp3"; 
+    //appends soundEl to h2
+    h2El.appendChild(soundEl);
+}
 
 //getting what is in local storage
 var loadFromStorage = function(){
     //gets from local storage
-    localStorage.getItem(myArr, mySound);
-    //console logs the value
-    console.log(mySound);
-    //calls get YT function with mySound variable
-    getYt(mySound);
+    var retrievedString = localStorage.getItem(myArr);
+    console.log(myArr);
+    //converts string into Object
+    var retrievedObject = JSON.parse(retrievedString);
+    console.log(retrievedObject);
+    console.log(retrievedObject.sound);
+    //calls get YT function with object video
+    getYt(retrievedObject.video);
+    //calls get Audio function with object sound
+    getAudio(retrievedObject.sound);
     
 }
 
 //saving to Storage function (probably will require parameter)
 var savingToStorage = function(){
-    //saves to local storage
-    localStorage.setItem(myArr, mySound);
+    //saves to local storage, creates object into string
+    localStorage.setItem(myArr, JSON.stringify(mediaNum));
     //calls load from local storage
     loadFromStorage();
 }
