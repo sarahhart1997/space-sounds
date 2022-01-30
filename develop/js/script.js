@@ -1,24 +1,25 @@
 //TO BE UPDATED WITH QUERY SELECTORS: Set up array
 var arr = [
     "Saturn in Red",
-    "Juno Gets Ready to Shake It",
+    "Liftoff Apollo 11",
     "The Kepler Spacecraft",
     "Earth Atmosphere Observations",
     "Ganymede Trailing Hemisphere",
-    "A Wafer of Titan",
-    "Amateur Radio",
-    "Echo Test",
-    "Rover Driving Test"
+    "Sputnik Planum",
+    "Stardust",
+    "Voyager of Jupiter",
+    "Rover Driving Test",
+    "Frost on Mars"
 ];
 //TO BE ERASED: Calls index in array (replace with button call)
-var myArr = arr[8]
+var myArr = arr[9]
 //TO BE ERASED: Console logs index string of array
 console.log(myArr);
 console.log(arr.length);
 //get Photo function (will probably require parameter)
 var getPhoto = function() {
     // format the nasa image api url
-    var apiUrl = `https://images-api.nasa.gov/search?q=${myArr}`;
+    var apiUrl = `https://images-api.nasa.gov/search?q=${myArr}&media_type=image`;
 
     // make a get request to url
     fetch(apiUrl).then(function(response) {
@@ -41,17 +42,18 @@ getPhoto();
 //TO BE UPDATED WITH SOUNDS OR VIDEO NAMES: creates sound array
 sounds = [
     "saturn",
-    "juno",
+    "apollo 11",
     "kepler",
-    "atmosphere",
+    "complex earth atmosphere",
     "ganymede",
-    "titan",
-    "radio",
-    "echo",
+    "sputnik",
+    "stardust",
+    "voyager",
     "rover",
+    "frost on mars",
 ]
 //TO BE ERASED: Calls index in array (replace with button call)
-var mySound = sounds[8];
+var mySound = sounds[9];
 console.log(mySound);
 //gets youtube video
 var getYt = function(sound) {
