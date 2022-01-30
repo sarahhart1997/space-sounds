@@ -4,28 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css"
+      integrity="sha512-/2285SnGiTHjSKBkJzedsJ8wwSP0j74ZQyusMQ9j5Z1RtyKqZ3XtfS8hVp8OadLs2uq+8V6/n+CyqUNTO/UpYg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./develop/css/style.css" />
+
     <title>Space Sounds</title>
   </head>
   <body>
     <!-- Background HTML-->
     <div class="background-container">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png"
-        alt=""
-      />
       <div class="stars"></div>
       <div class="twinkling"></div>
     </div>
     <!--Header Start-->
     <header>
+      <img src="./develop/photos/nasa_logo_icon_170926 (1).png" />
       <h1>The Sounds of Space</h1>
-      <!-- need to fix img styling
-        <img
-        src="develop/photos/nasa-logo-web-rgb.png"
-        id="nasa-logo"
-        alt="nasa-logo"
-      />-->
     </header>
     <!--Header End-->
 
@@ -39,15 +38,49 @@
           sounds from historic spaceflights and current missions.
         </em>
       </section>
-      <div class="drop-down">
-        <label for="space-categories">Choose a space category:</label>
-        <select name="space-categories" id="space-categories">
-          <option value="planets">Planets 🪐</option>
-          <option value="moons">Moons 🌕</option>
-          <option value="missions">Missions 🚀</option>
-          <option value="crew">Crew 👩🏼‍🚀</option>
-        </select>
+
+      <!--Buttons-->
+      <div class="photo-buttons">
+        <button
+          class="planets bttn-jelly bttn-md bttn-royal"
+          id="saturn-button"
+        >
+          Saturn in Red
+        </button>
+        <button class="planets bttn-jelly bttn-md bttn-royal" id="earth-button">
+          Earth Atmosphere Observations
+        </button>
+        <button class="planets bttn-jelly bttn-md bttn-royal" id="mars-button">
+          Frost on Mars
+        </button>
+        <button class="bttn-jelly bttn-md bttn-royal" id="apollo-button">
+          Liftoff Apollo 11
+        </button>
+        <button class="bttn-jelly bttn-md bttn-royal" id="kepler-button">
+          The Kepler Spacecraft
+        </button>
+        <button class="moons bttn-jelly bttn-md bttn-royal" id="gany-button">
+          Ganymede Trailing Hemisphere
+        </button>
+        <button class="bttn-jelly bttn-md bttn-royal" id="sputnik-button">
+          Sputnik Planum
+        </button>
+        <br />
+        <br />
+        <button class="bttn-jelly bttn-md bttn-royal" id="stardust-button">
+          Stardust
+        </button>
+        <button class="bttn-jelly bttn-md bttn-royal" id="jupiter-button">
+          Voyager of Jupiter
+        </button>
+        <button class="bttn-jelly bttn-md bttn-royal" id="rover-button">
+          Rover Driving Test
+        </button>
       </div>
+      <!--Carousel Section Start-->
+      <!-- on category click, would need to replace images in carousel-->
+
+      <!--Carousel Section End -->
     </main>
 
     <!--Main Section End-->
