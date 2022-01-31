@@ -260,8 +260,8 @@ var savingToStorage = function (txt) {
 //TO DO: event listener for image
 buttonsEl.addEventListener("click",getPhoto);
 
-// CAROUSEL //
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-  });
+// CAROUSEL 
+//     document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.carousel');
+//     var instances = M.Carousel.init(elems, options);
+//   });
