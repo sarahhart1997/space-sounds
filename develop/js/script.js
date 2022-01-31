@@ -257,8 +257,8 @@ var savingToStorage = function (txt) {
     loadFromStorage(txt);
 };
 
-//TO DO: event listener for image
-buttonsEl.addEventListener("click",getPhoto);
+// //TO DO: event listener for image
+// buttonsEl.addEventListener("click",getPhoto);
 
 // CAROUSEL 
 //     document.addEventListener('DOMContentLoaded', function() {
