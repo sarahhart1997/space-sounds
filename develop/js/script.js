@@ -259,3 +259,8 @@ var savingToStorage = function (txt) {
 
 //TO DO: event listener for image
 buttonsEl.addEventListener("click",getPhoto);
+
+// CAROUSEL //
+$(document).ready(function(){
+    $('.carousel').carousel();
+  });
