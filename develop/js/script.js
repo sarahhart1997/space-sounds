@@ -189,33 +189,45 @@ var getPhoto = function(event) {
 
 var getYt = function (vid) {
     // format the youtube url
-    var apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${vid}&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc`;
-    //TO BE ERASED: Console log apiURL variable
-    console.log(apiUrl);
-    // make a get request to url
-    fetch(apiUrl).then(function (response) {
-        // request was successful
-        if (response.ok) {
-            response.json().then(function (data) {
-            //creates iframe
-            var iframeEl = document.createElement("iframe");
-            iframeEl.innerHTML ="";
-            //console logs iframe
-            console.log(iframeEl);
-            //creates ID for iframe
-            iframeEl.setAttribute("id", "new-video");
-            // gives iframe a source
-            iframeEl.src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
-            //appends iframe to H2
-            // videoContainerEl.appendChild(iframeEl);
-            // containerEl.appendChild(videoContainerEl);
-            containerEl.appendChild(iframeEl);
-        });
-        } else {
-            // if not successful, redirect to homepage
-            document.location.replace("./index.html");
-        }
-    });
+    // var apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${vid}&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc`;
+    // //TO BE ERASED: Console log apiURL variable
+    // console.log(apiUrl);
+    // // make a get request to url
+    // fetch(apiUrl).then(function (response) {
+    //     // request was successful
+    //     if (response.ok) {
+    //         response.json().then(function (data) {
+    //         //creates iframe
+    //         var iframeEl = document.createElement("iframe");
+    //         iframeEl.innerHTML ="";
+    //         //console logs iframe
+    //         console.log(iframeEl);
+    //         //creates ID for iframe
+    //         iframeEl.setAttribute("id", "new-video");
+    //         // gives iframe a source
+    //         iframeEl.src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
+    //         //appends iframe to H2
+    //         // videoContainerEl.appendChild(iframeEl);
+    //         // containerEl.appendChild(videoContainerEl);
+    //         containerEl.appendChild(iframeEl);
+    //     });
+    //     } else {
+    //         // if not successful, redirect to homepage
+    //         document.location.replace("./index.html");
+    //     }
+    // });
+    console.log(vid);
+    //creates iframe
+    var iframeEl = document.createElement("iframe");
+    iframeEl.innerHTML ="";
+    //console logs iframe
+    console.log(iframeEl);
+    //creates ID for iframe
+    iframeEl.setAttribute("id", "new-video");
+    // gives iframe a source
+    iframeEl.src = `https://www.youtube.com/embed/d9uxl_7_nWs`;
+    containerEl.appendChild(iframeEl);
+
 };
 //get audio function
 var getAudio = function (aud) {
@@ -257,8 +269,8 @@ var savingToStorage = function (txt) {
     loadFromStorage(txt);
 };
 
-// //TO DO: event listener for image
-// buttonsEl.addEventListener("click",getPhoto);
+//TO DO: event listener for image
+buttonsEl.addEventListener("click",getPhoto);
 
 // CAROUSEL 
 //     document.addEventListener('DOMContentLoaded', function() {
