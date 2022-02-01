@@ -33,15 +33,7 @@ main {
 }
 
 section {
-  margin: 5px 975px 0px 5px;
-}
-
-.drop-down {
-  background-color: var(--second-color);
-  font-size: 25px;
-  padding: 15px;
-  margin: 25px 975px 15px 5px;
-  border-radius: 10px;
+  margin: 5px 975px 0px 50px;
 }
 
 select {
@@ -50,8 +42,29 @@ select {
   padding: 5px;
 }
 
-.photo-buttons {
-  margin: 50px 0px 0px 75px;
+#photo-buttons {
+  margin: 15px;
+  width: 100%;
+}
+
+#saturn-button {
+  margin-right: 10px;
+}
+
+#mars-button {
+  margin-right: 10px;
+}
+
+#stardust-button {
+  margin-right: 10px;
+}
+
+#sputnik-button {
+  margin-right: 10px;
+}
+
+#jupiter-button {
+  margin-right: 10px;
 }
 
 footer {
@@ -94,4 +107,4 @@ footer {
   z-index: 2;
 }
 
-/* GALLERY */
+/* CAROUSEL */
