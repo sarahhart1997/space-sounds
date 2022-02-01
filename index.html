@@ -52,48 +52,79 @@
         </em>
       </section>
 
-      <!--Buttons - change order to match array in JS, use bootstrap to make into two columns-->
-      <div class="photo-buttons">
-        <button
-          class="planets bttn-jelly bttn-md bttn-royal"
-          id="saturn-button"
-        >
-          Saturn in Red
-        </button>
-        <button class="planets bttn-jelly bttn-md bttn-royal" id="earth-button">
-          Earth Atmosphere Observations
-        </button>
-        <button class="planets bttn-jelly bttn-md bttn-royal" id="mars-button">
-          Frost on Mars
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="apollo-button">
-          Liftoff Apollo 11
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="kepler-button">
-          The Kepler Spacecraft
-        </button>
-        <button class="moons bttn-jelly bttn-md bttn-royal" id="gany-button">
-          Ganymede Trailing Hemisphere
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="sputnik-button">
-          Sputnik Planum
-        </button>
-        <br />
-        <br />
-        <button class="bttn-jelly bttn-md bttn-royal" id="stardust-button">
-          Stardust
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="jupiter-button">
-          Voyager of Jupiter
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="rover-button">
-          Rover Driving Test
-        </button>
-      </div>
-      <!--Div to hold sound, image, video-->
-      <div id="container">
-          <img id="photo-folder">
-      </div>
+      <!--Buttons - change order to match array in JS-->
+      <div class="container float-left">
+        <div class="row" id="photo-buttons">
+          <div class="col-6">
+            <div class="row">
+              <button
+                class="planets bttn-jelly bttn-md bttn-royal"
+                id="saturn-button"
+              >
+                Saturn in Red
+              </button>
+              <button
+                class="planets bttn-jelly bttn-md bttn-royal"
+                id="earth-button"
+              >
+                Earth Atmosphere Observations
+              </button>
+            </div>
+            <div class="row">
+              <button
+                class="planets bttn-jelly bttn-md bttn-royal"
+                id="mars-button"
+              >
+                Frost on Mars
+              </button>
+              <button class="bttn-jelly bttn-md bttn-royal" id="apollo-button">
+                Liftoff Apollo 11
+              </button>
+            </div>
+            <div class="row">
+              <button
+                class="bttn-jelly bttn-md bttn-royal"
+                id="stardust-button"
+              >
+                Stardust
+              </button>
+              <button
+                class="moons bttn-jelly bttn-md bttn-royal"
+                id="gany-button"
+              >
+                Ganymede Trailing Hemisphere
+              </button>
+            </div>
+            <div class="row">
+              <button class="bttn-jelly bttn-md bttn-royal" id="sputnik-button">
+                Sputnik Planum
+              </button>
+              <button class="bttn-jelly bttn-md bttn-royal" id="kepler-button">
+                The Kepler Spacecraft
+              </button>
+            </div>
+            <div class="row">
+              <button class="bttn-jelly bttn-md bttn-royal" id="jupiter-button">
+                Voyager of Jupiter
+              </button>
+              <button class="bttn-jelly bttn-md bttn-royal" id="rover-button">
+                Rover Driving Test
+              </button>
+            </div>
+          </div>
+          <div class="col-6">
+            <!-- Carousel -->
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img src="./develop/photos/milky-way.jpg"
+              /></a>
+              <a class="carousel-item"
+                ><img src="./develop/photos/planets.jpg"
+              /></a>
+              <a class="carousel-item"
+                ><img src="./develop/photos/vacuum.jpg"
+              /></a>
+            </div>
 
             <!--Div to hold sound, image, video-->
             <div id="vessel">
