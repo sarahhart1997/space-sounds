@@ -5,21 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css"
-    integrity="sha512-/2285SnGiTHjSKBkJzedsJ8wwSP0j74ZQyusMQ9j5Z1RtyKqZ3XtfS8hVp8OadLs2uq+8V6/n+CyqUNTO/UpYg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css"
+      integrity="sha512-/2285SnGiTHjSKBkJzedsJ8wwSP0j74ZQyusMQ9j5Z1RtyKqZ3XtfS8hVp8OadLs2uq+8V6/n+CyqUNTO/UpYg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- Bootstrap CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-    crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- Carousel CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <link rel="stylesheet" href="./develop/css/style.css" />
     <!-- add space favicon-->
-    <link rel="icon" type="image/jpg" href = "./develop/photos/blackhole.ico">
+    <link rel="icon" type="image/jpg" href="./develop/photos/blackhole.ico" />
     <title>Space Sounds</title>
   </head>
   <body>
@@ -30,10 +36,8 @@
     </div>
     <!--Header Start-->
     <header>
-
       <img src="./develop/photos/nasa_logo_icon_170926 (1).png" />
       <h1>The Sounds of Space</h1>
-        
     </header>
     <!--Header End-->
 
@@ -49,85 +53,110 @@
       </section>
 
       <!--Buttons - change order to match array in JS-->
-      <div class="photo-buttons">
-        <button
-          class="planets bttn-jelly bttn-md bttn-royal"
-          id="saturn-button"
-        >
-          Saturn in Red
-        </button>
-        <button class="planets bttn-jelly bttn-md bttn-royal" id="earth-button">
-          Earth Atmosphere Observations
-        </button>
-        <button class="planets bttn-jelly bttn-md bttn-royal" id="mars-button">
-          Frost on Mars
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="apollo-button">
-          Liftoff Apollo 11
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="kepler-button">
-          The Kepler Spacecraft
-        </button>
-        <button class="moons bttn-jelly bttn-md bttn-royal" id="gany-button">
-          Ganymede Trailing Hemisphere
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="sputnik-button">
-          Sputnik Planum
-        </button>
-        <br />
-        <br />
-        <button class="bttn-jelly bttn-md bttn-royal" id="stardust-button">
-          Stardust
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="jupiter-button">
-          Voyager of Jupiter
-        </button>
-        <button class="bttn-jelly bttn-md bttn-royal" id="rover-button">
-          Rover Driving Test
-        </button>
-      </div>
+      <div class="container float-left">
+        <div class="row" id="photo-buttons">
+          <div class="col-6">
+            <div class="row">
+              <button
+                class="planets bttn-jelly bttn-md bttn-royal"
+                id="saturn-button"
+              >
+                Saturn in Red
+              </button>
+              <button
+                class="planets bttn-jelly bttn-md bttn-royal"
+                id="earth-button"
+              >
+                Earth Atmosphere Observations
+              </button>
+            </div>
+            <div class="row">
+              <button
+                class="planets bttn-jelly bttn-md bttn-royal"
+                id="mars-button"
+              >
+                Frost on Mars
+              </button>
+              <button class="bttn-jelly bttn-md bttn-royal" id="apollo-button">
+                Liftoff Apollo 11
+              </button>
+            </div>
+            <div class="row">
+              <button
+                class="bttn-jelly bttn-md bttn-royal"
+                id="stardust-button"
+              >
+                Stardust
+              </button>
+              <button
+                class="moons bttn-jelly bttn-md bttn-royal"
+                id="gany-button"
+              >
+                Ganymede Trailing Hemisphere
+              </button>
+            </div>
+            <div class="row">
+              <button class="bttn-jelly bttn-md bttn-royal" id="sputnik-button">
+                Sputnik Planum
+              </button>
+              <button class="bttn-jelly bttn-md bttn-royal" id="kepler-button">
+                The Kepler Spacecraft
+              </button>
+            </div>
+            <div class="row">
+              <button class="bttn-jelly bttn-md bttn-royal" id="jupiter-button">
+                Voyager of Jupiter
+              </button>
+              <button class="bttn-jelly bttn-md bttn-royal" id="rover-button">
+                Rover Driving Test
+              </button>
+            </div>
+          </div>
+          <div class="col-6">
+            <!-- Carousel -->
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img src="./develop/photos/milky-way.jpg"
+              /></a>
+              <a class="carousel-item"
+                ><img src="./develop/photos/planets.jpg"
+              /></a>
+              <a class="carousel-item"
+                ><img src="./develop/photos/vacuum.jpg"
+              /></a>
+            </div>
 
-      <!-- Carousel-->
-      <div class="carousel">
-        <a class="carousel-item"><img src="./develop/photos/milky-way.jpg"></a>
-        <a class="carousel-item"><img src="./develop/photos/planets.jpg"></a>
-        <a class="carousel-item"><img src="./develop/photos/vacuum.jpg"></a>
-    </div>
-    
-      <!--Div to hold sound, image, video-->
-      <div id="container">
-          <!-- <img id="photo-folder"> -->
+            <!--Div to hold sound, image, video-->
+            <div id="container">
+              <!-- <img id="photo-folder"> -->
+            </div>
+          </div>
+        </div>
       </div>
-
     </main>
-
     <!--Main Section End-->
-
-    <!--Footer Start-->
     <!--Footer Start-->
     <footer>
       <h2>❤️ Made with love by Team 6!</h2>
     </footer>
     <!--Footer End-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Bootstrap Script -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./develop/js/script.js"></script>
   </body>
-</html>
-<!--Main Section Start-->
-<img>
-<!--Main Section End-->
-
-<!--Footer Start-->
-    <!--Footer Start-->
-    <footer>
-        <h2>
-            ❤️ Made with love by Team 6!
-        </h2>
-    </footer>
-<!--Footer End-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- Bootstrap Script -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="./develop/js/script.js"></script>
-</body>
 </html>
