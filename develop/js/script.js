@@ -1,9 +1,9 @@
 //query selects h2
-var containerEl = document.querySelector("#container");
-// var photoContainerEl = document.querySelector("#photo-container");
-// var audioContainerEl = document.querySelector("#audio-container");
-// var videoContainerEl = document.querySelector("#video-container");
-var buttonsEl = document.querySelector(".photo-buttons")
+var vesselEl = document.querySelector("#vessel");
+// var photovesselEl = document.querySelector("#photo-container");
+// var audiovesselEl = document.querySelector("#audio-container");
+// var videovesselEl = document.querySelector("#video-container");
+var buttonsEl = document.querySelector("#photo-buttons")
 //TO BE UPDATED WITH QUERY SELECTORS: Set up array
 var num = 1;
 //TO BE ERASED: array of button names
@@ -151,7 +151,7 @@ var myMedias = function(txt){
 
 var getPhoto = function(event) {
     //clears container element
-    containerEl.innerHTML ="";
+    vesselEl.innerHTML ="";
     //gets targets ids of the button clicked
     var buttonClicked = event.target.getAttribute("id");
     console.log(buttonClicked);
@@ -171,9 +171,9 @@ var getPhoto = function(event) {
             // query selector for image
             //gives the src a value
             imageEl.src = data.collection.items[0].links[0].href;
-            // photoContainerEl.appendChild(imageEl);
-            // containerEl.appendChild(photoContainerEl);
-            containerEl.appendChild(imageEl);
+            // photovesselEl.appendChild(imageEl);
+            // vesselEl.appendChild(photovesselEl);
+            vesselEl.appendChild(imageEl);
         });
         } else {
         // if not successful, redirect to homepage
@@ -207,9 +207,9 @@ var getYt = function (vid) {
     //         // gives iframe a source
     //         iframeEl.src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
     //         //appends iframe to H2
-    //         // videoContainerEl.appendChild(iframeEl);
-    //         // containerEl.appendChild(videoContainerEl);
-    //         containerEl.appendChild(iframeEl);
+    //         // videovesselEl.appendChild(iframeEl);
+    //         // vesselEl.appendChild(videovesselEl);
+    //         vesselEl.appendChild(iframeEl);
     //     });
     //     } else {
     //         // if not successful, redirect to homepage
@@ -226,7 +226,7 @@ var getYt = function (vid) {
     iframeEl.setAttribute("id", "new-video");
     // gives iframe a source
     iframeEl.src = `https://www.youtube.com/embed/d9uxl_7_nWs`;
-    containerEl.appendChild(iframeEl);
+    vesselEl.appendChild(iframeEl);
 
 };
 //get audio function
@@ -239,9 +239,9 @@ var getAudio = function (aud) {
     soundEl.src = `./develop/sounds/${aud}`;
     soundEl.type = "audio/mp3";
     //appends soundEl to h2
-    // audioContainerEl.appendChild(soundEl);
-    // containerEl.appendChild(audioContainerEl);
-    containerEl.appendChild(soundEl);
+    // audiovesselEl.appendChild(soundEl);
+    // vesselEl.appendChild(audiovesselEl);
+    vesselEl.appendChild(soundEl);
 };
 
 //getting what is in local storage
