@@ -33,13 +33,17 @@ main {
 }
 
 section {
-  margin: 5px 975px 0px 50px;
+  margin: 5px 975px 0px 15px;
 }
 
 select {
   border-radius: 10px;
   font-size: 15px;
   padding: 5px;
+}
+
+.row {
+  margin-top: 20px;
 }
 
 #photo-buttons {

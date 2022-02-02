@@ -18,11 +18,11 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <!-- Carousel CDN -->
+    <!-- Carousel CDN
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="./develop/css/style.css" />
     <!-- add space favicon-->
     <link rel="icon" type="image/jpg" href="./develop/photos/blackhole.ico" />
@@ -43,7 +43,7 @@
 
     <!--Main Section Start-->
     <main>
-      <section>
+      <section class="w-100 col-6">
         <em>
           Soaring to the depths of our universe, gallant spacecraft roam the
           cosmos, snapping images of celestial wonders. Explore the universe and
@@ -53,7 +53,7 @@
       </section>
 
       <!--Buttons - change order to match array in JS-->
-      <div class="container float-left">
+      <div class="w-100 container float-left">
         <div class="row" id="photo-buttons">
           <div class="col-6">
             <div class="row">
@@ -113,7 +113,7 @@
             </div>
           </div>
           <div class="col-6">
-            <!-- Carousel -->
+            <!-- Carousel
             <div class="carousel">
               <a class="carousel-item"
                 ><img src="./develop/photos/milky-way.jpg"
@@ -124,10 +124,13 @@
               <a class="carousel-item"
                 ><img src="./develop/photos/vacuum.jpg"
               /></a>
-            </div>
+            </div> -->
 
             <!--Div to hold sound, image, video-->
-            <div id="vessel">
+            <div class="float-right" id="vessel">
+              <div id="photo-container"></div>
+              <div id="audio-container"></div>
+              <div id="video-container"></div>
               <!-- <img id="photo-folder"> -->
             </div>
           </div>

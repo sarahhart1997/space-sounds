@@ -1,8 +1,8 @@
 //query selects h2
 var vesselEl = document.querySelector("#vessel");
-// var photovesselEl = document.querySelector("#photo-container");
-// var audiovesselEl = document.querySelector("#audio-container");
-// var videovesselEl = document.querySelector("#video-container");
+var photovesselEl = document.querySelector("#photo-container");
+var audiovesselEl = document.querySelector("#audio-container");
+var videovesselEl = document.querySelector("#video-container");
 var buttonsEl = document.querySelector("#photo-buttons")
 //TO BE UPDATED WITH QUERY SELECTORS: Set up array
 var num = 1;
@@ -151,7 +151,8 @@ var myMedias = function(txt){
 
 var getPhoto = function(event) {
     //clears container element
-    vesselEl.innerHTML ="";
+    // vesselEl.innerHTML ="";
+    photovesselEl.innerHTML="";
     //gets targets ids of the button clicked
     var buttonClicked = event.target.getAttribute("id");
     console.log(buttonClicked);
@@ -171,9 +172,9 @@ var getPhoto = function(event) {
             // query selector for image
             //gives the src a value
             imageEl.src = data.collection.items[0].links[0].href;
-            // photovesselEl.appendChild(imageEl);
-            // vesselEl.appendChild(photovesselEl);
-            vesselEl.appendChild(imageEl);
+            photovesselEl.appendChild(imageEl);
+            vesselEl.appendChild(photovesselEl);
+            // vesselEl.appendChild(imageEl);
         });
         } else {
         // if not successful, redirect to homepage
@@ -219,29 +220,33 @@ var getYt = function (vid) {
     console.log(vid);
     //creates iframe
     var iframeEl = document.createElement("iframe");
-    iframeEl.innerHTML ="";
+    // iframeEl.innerHTML ="";
+    videovesselEl.innerHTML="";
     //console logs iframe
     console.log(iframeEl);
     //creates ID for iframe
     iframeEl.setAttribute("id", "new-video");
     // gives iframe a source
     iframeEl.src = `https://www.youtube.com/embed/d9uxl_7_nWs`;
-    vesselEl.appendChild(iframeEl);
+    // vesselEl.appendChild(iframeEl);
+    videovesselEl.appendChild(iframeEl);
+    vesselEl.appendChild(videovesselEl);
 
 };
 //get audio function
 var getAudio = function (aud) {
     //creates audio
     var soundEl = document.createElement("audio");
-    soundEl.innerHTML ="";
+    // soundEl.innerHTML ="";
+    audiovesselEl.innerHTML="";
     //gives audio attributes (may add id and/or class)
     soundEl.controls = "controls";
     soundEl.src = `./develop/sounds/${aud}`;
     soundEl.type = "audio/mp3";
     //appends soundEl to h2
-    // audiovesselEl.appendChild(soundEl);
-    // vesselEl.appendChild(audiovesselEl);
-    vesselEl.appendChild(soundEl);
+    audiovesselEl.appendChild(soundEl);
+    vesselEl.appendChild(audiovesselEl);
+    // vesselEl.appendChild(soundEl);
 };
 
 //getting what is in local storage
