@@ -88,6 +88,12 @@ select {
   margin-top: 20px;
 }
 
+/* Buttons Style */
+#fullbuttons {
+  background-color: white;
+  opacity: 20%;
+}
+
 #photo-buttons {
   margin: 15px;
   width: 100%;
