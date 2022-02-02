@@ -16,13 +16,18 @@ body {
 
 header {
   position: sticky;
-  width: 100%;
-  background-image: url("../photos/planets.jpg");
+  background-color: rgb(17, 1, 32);
   padding: 10px;
 }
 
+/* #header-background {
+  width: 100%;
+  height: auto;
+  background: url("../photos/planets.jpg")
+} */
+
 .logo {
-  position: fixed;
+  position: fixed;    
   top: 0;
   left: 0;
 }
