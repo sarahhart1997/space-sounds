@@ -23,7 +23,7 @@ video {
 }
 
 .video-wrapper {
-  /* This tells the absolute video to be positioned relative to it's container */
+  /* Absolute video to be positioned relative to it's container */
   position: relative;
   width: 100%;
   height: 100%;
@@ -37,6 +37,8 @@ video {
   align-items: center;
   justify-content: center;
 }
+
+/* Video Background End */
 
 body {
   color: var(--first-color);
