@@ -9,6 +9,35 @@
   padding: 0;
 }
 
+/* Video Background */
+video {
+  /* Making the video background size */
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+
+  /* Video Positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.video-wrapper {
+  /* This tells the absolute video to be positioned relative to it's container */
+  position: relative;
+  width: 2000px;
+  height: 1080px;
+
+  /* Anything outside of the container is hidden */
+  overflow: hidden;
+
+  /* Centering video vertically and horizantally */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   color: var(--first-color);
   font-family: Arial, Helvetica, sans-serif;
@@ -96,7 +125,7 @@ footer {
   right: 0;
 }
 
-.stars {
+/* .stars {
   background: black
     url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
   position: absolute;
@@ -120,6 +149,5 @@ footer {
   top: 0;
   bottom: 0;
   z-index: 2;
-}
+} */
 
-/* CAROUSEL */
