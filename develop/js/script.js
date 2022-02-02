@@ -158,6 +158,7 @@ var getPhoto = function(event) {
     console.log(buttonClicked);
     //gets text of the button by the id
     var buttonText = document.getElementById(buttonClicked).textContent.trim();
+    if (document.getElementById(buttonClicked).textContent) {
     console.log(buttonText);
     // format the nasa image api url
     var apiUrl = `https://images-api.nasa.gov/search?q=${buttonText}&media_type=image`;
@@ -172,6 +173,7 @@ var getPhoto = function(event) {
             // query selector for image
             //gives the src a value
             imageEl.src = data.collection.items[0].links[0].href;
+            imageEl.width = "400";
             photovesselEl.appendChild(imageEl);
             vesselEl.appendChild(photovesselEl);
             // vesselEl.appendChild(imageEl);
@@ -182,6 +184,7 @@ var getPhoto = function(event) {
         }
     });
     savingToStorage(buttonText);
+}
 };
 //TO BE ERASED: probably with switch case or if else statement
 // var mediaNum = myMedias[num];
