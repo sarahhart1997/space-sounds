@@ -16,17 +16,23 @@ body {
 
 header {
   position: sticky;
-  background-color: black;
+  width: 100%;
+  background-image: url("../photos/planets.jpg");
   padding: 10px;
 }
 
-header img {
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/* header img {
   position: absolute;
   height: 50px;
   width: 50px;
   margin-bottom: 20px;
   margin-left: 330px;
-}
+} */
 
 main {
   position: absolute;
