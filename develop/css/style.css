@@ -89,9 +89,8 @@ select {
 }
 
 /* Buttons Style */
-#fullbuttons {
+button {
   background-color: white;
-  opacity: 20%;
 }
 
 #photo-buttons {
