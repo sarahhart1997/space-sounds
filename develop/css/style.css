@@ -118,9 +118,9 @@ select {
   margin-right: 25px;
 }
 
-/* Footer Style */
-footer {
-  font-size: 10px;
+/* Audio Style */
+audio {
+  width: 400px;
 }
 
 /* https://codepen.io/agoodwin/pen/NMJoER */

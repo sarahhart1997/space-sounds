@@ -234,6 +234,8 @@ var getYt = function (vid) {
     iframeEl.setAttribute("id", "new-video");
     // gives iframe a source
     iframeEl.src = `https://www.youtube.com/embed/d9uxl_7_nWs`;
+    //size of video
+    iframeEl.width = "400";
     // vesselEl.appendChild(iframeEl);
     videovesselEl.appendChild(iframeEl);
     vesselEl.appendChild(videovesselEl);
