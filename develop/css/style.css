@@ -89,9 +89,9 @@ select {
 }
 
 /* Buttons Style */
-button {
+/* button {
   background-color: white;
-}
+} */
 
 #photo-buttons {
   margin: 15px;
@@ -118,19 +118,20 @@ button {
   margin-right: 25px;
 }
 
+/* Footer Style */
 footer {
   font-size: 10px;
 }
 
 /* https://codepen.io/agoodwin/pen/NMJoER */
 
-.background-container {
+/* .background-container {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-}
+} */
 
 /* .stars {
   background: black
