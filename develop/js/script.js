@@ -150,12 +150,15 @@ var myMedias = function(txt){
 //get Photo function (will probably require parameter)
 
 var getPhoto = function(event) {
-    //clears container element
-    // vesselEl.innerHTML ="";
-    photovesselEl.innerHTML="";
     //gets targets ids of the button clicked
     var buttonClicked = event.target.getAttribute("id");
     console.log(buttonClicked);
+    if(buttonClicked === null){
+        return;
+    }
+    //clears container element
+    // vesselEl.innerHTML ="";
+    photovesselEl.innerHTML="";
     //gets text of the button by the id
     var buttonText = document.getElementById(buttonClicked).textContent.trim();
     if (document.getElementById(buttonClicked).textContent) {
@@ -176,6 +179,7 @@ var getPhoto = function(event) {
             imageEl.width = "400";
             photovesselEl.appendChild(imageEl);
             vesselEl.appendChild(photovesselEl);
+            savingToStorage(buttonText);
             // vesselEl.appendChild(imageEl);
         });
         } else {
@@ -183,7 +187,6 @@ var getPhoto = function(event) {
             document.location.replace("./index.html");
         }
     });
-    savingToStorage(buttonText);
 }
 };
 //TO BE ERASED: probably with switch case or if else statement
