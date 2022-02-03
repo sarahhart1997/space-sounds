@@ -236,7 +236,7 @@ var getYt = function (vid) {
     iframeEl.src = `https://www.youtube.com/embed/d9uxl_7_nWs`;
     //size of video
     iframeEl.width = "400";
-    iframeEl.height = "300";
+    iframeEl.height = "250";
     // vesselEl.appendChild(iframeEl);
     videovesselEl.appendChild(iframeEl);
     vesselEl.appendChild(videovesselEl);
