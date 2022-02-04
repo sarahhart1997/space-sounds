@@ -156,18 +156,17 @@ var getYt = function (vid) {
 };
 //get audio function
 var getAudio = function (aud) {
-    //creates audio
+    //creates audio element
     var soundEl = document.createElement("audio");
-    // soundEl.innerHTML ="";
+    // clears audio vessel element
     audiovesselEl.innerHTML="";
-    //gives audio attributes (may add id and/or class)
+    //gives audio attributes
     soundEl.controls = "controls";
     soundEl.src = `./develop/sounds/${aud}`;
     soundEl.type = "audio/mp3";
-    //appends soundEl to h2
+    //appends audio variable to audio vessel and appends audio vessel div to vessel div
     audiovesselEl.appendChild(soundEl);
     vesselEl.appendChild(audiovesselEl);
-    // vesselEl.appendChild(soundEl);
 };
 
 //getting what is in local storage
@@ -195,11 +194,5 @@ var savingToStorage = function (txt) {
     loadFromStorage(txt);
 };
 
-//TO DO: event listener for image
+//event listener for image that calls the buttonsEl
 buttonsEl.addEventListener("click",getPhoto);
-
-// CAROUSEL 
-//     document.addEventListener('DOMContentLoaded', function() {
-//     var elems = document.querySelectorAll('.carousel');
-//     var instances = M.Carousel.init(elems, options);
-//   });
