@@ -80,6 +80,27 @@ var myMedias = function(txt){
             break;
     };
 }
+
+//getting what is in local storage
+var loadFromStorage = function (txt) {
+    //gets from local storage as a string
+    var retrievedString = localStorage.getItem(txt);
+    //converts string into Object
+    var retrievedObject = JSON.parse(retrievedString);
+    //calls get YT function with object video
+    getYt(retrievedObject.video);
+    //calls get Audio function with object sound
+    getAudio(retrievedObject.sound);
+};
+
+//saving to Storage function that takes button text as parameter
+var savingToStorage = function (txt) {
+    //saves to local storage, creates object returning from myMedias into string
+    localStorage.setItem(txt, JSON.stringify(myMedias(txt)));
+    //calls load from local storage function
+    loadFromStorage(txt);
+};
+
 //gets name of photo from click event listener
 var getPhoto = function(event) {
     //gets targets ids of the button clicked
@@ -167,31 +188,6 @@ var getAudio = function (aud) {
     //appends audio variable to audio vessel and appends audio vessel div to vessel div
     audiovesselEl.appendChild(soundEl);
     vesselEl.appendChild(audiovesselEl);
-};
-
-//getting what is in local storage
-var loadFromStorage = function (txt) {
-    //gets from local storage
-    var retrievedString = localStorage.getItem(txt);
-    console.log(txt);
-    //converts string into Object
-    var retrievedObject = JSON.parse(retrievedString);
-    console.log(retrievedObject);
-    console.log(retrievedObject.sound);
-    //calls get YT function with object video
-    getYt(retrievedObject.video);
-    //calls get Audio function with object sound
-    getAudio(retrievedObject.sound);
-};
-
-//saving to Storage function (probably will require parameter)
-var savingToStorage = function (txt) {
-    //saves to local storage, creates object into string
-    // console.log(myMedias(txt));
-    // console.log(myMedias);
-    localStorage.setItem(txt, JSON.stringify(myMedias(txt)));
-    //calls load from local storage
-    loadFromStorage(txt);
 };
 
 //event listener for image that calls the buttonsEl
