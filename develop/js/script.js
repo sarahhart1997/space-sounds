@@ -122,11 +122,14 @@ var getPhoto = function(event) {
 
 
 var getYt = function (vid) {
+    //clears video vessel element
     videovesselEl.innerHTML="";
     // format the youtube url
     var apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${vid}&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyDZ9fGPHgNx9yGoHa1Xc2oi-Xl5sIP1Umc`;
+    
+    //second API Key if needed
     //var apiUrl: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${vid}s&channelId=UC_aP7p621ATY_yAa8jMqUVA&key=AIzaSyBerfzrgwMnphwHhcfhDkxjGVfwXoPd0fA`;
-    console.log(apiUrl);
+
     // make a get request to url
     fetch(apiUrl).then(function (response) {
         // request was successful
@@ -134,43 +137,22 @@ var getYt = function (vid) {
             response.json().then(function (data) {
             //creates iframe
             var iframeEl = document.createElement("iframe");
-            iframeEl.innerHTML ="";
-            //console logs iframe
-            console.log(iframeEl);
             //creates ID for iframe
             iframeEl.setAttribute("id", "new-video");
             // gives iframe a source
             iframeEl.src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
-            //appends iframe to H2
+            //gives iframe a width and height
             iframeEl.width = "400";
             iframeEl.height = "250";
+            //appends iframe variable to video  vessel and appends video vessel div to vessel div
             videovesselEl.appendChild(iframeEl);
             vesselEl.appendChild(videovesselEl);
-            // vesselEl.appendChild(iframeEl);
         });
         } else {
             // if not successful, redirect to homepage
             document.location.replace("./index.html");
         }
     });
-    // console.log(vid);
-    // //creates iframe
-    // var iframeEl = document.createElement("iframe");
-    // // iframeEl.innerHTML ="";
-    // videovesselEl.innerHTML="";
-    // //console logs iframe
-    // console.log(iframeEl);
-    // //creates ID for iframe
-    // iframeEl.setAttribute("id", "new-video");
-    // // gives iframe a source
-    // iframeEl.src = `https://www.youtube.com/embed/d9uxl_7_nWs`;
-    // //size of video
-    // iframeEl.width = "400";
-    // iframeEl.height = "250";
-    // // vesselEl.appendChild(iframeEl);
-    // videovesselEl.appendChild(iframeEl);
-    // vesselEl.appendChild(videovesselEl);
-
 };
 //get audio function
 var getAudio = function (aud) {
