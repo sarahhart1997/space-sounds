@@ -170,8 +170,8 @@ var getYt = function (vid) {
             vesselEl.appendChild(videovesselEl);
         });
         } else {
-            // if not successful, redirect to homepage
-            document.location.replace("./index.html");
+            // returns the function
+            return;
         }
     });
 };
