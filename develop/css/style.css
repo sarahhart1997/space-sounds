@@ -62,18 +62,18 @@ main {
 }
 
 section {
-  margin: 30px 975px 0px 15px;
+  margin-top: 30px;
 }
 
-select {
+/* select {
   border-radius: 10px;
   font-size: 15px;
   padding: 5px;
-}
+} */
 
-.row {
+/* .row {
   margin-top: 20px;
-}
+} */
 
 #photo-buttons {
   margin: 15px;
@@ -101,20 +101,12 @@ select {
 }
 
 /* Audio Style */
-audio {
+#vessel audio,
+#vessel iframe,
+#vessel img {
   width: 400px;
 }
 
-/* header img {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  margin-bottom: 20px;
-  margin-left: 330px;
-} */
-
-/* #header-background {
-  width: 100%;
-  height: auto;
-  background: url("../photos/planets.jpg")
-} */
+#vessel iframe {
+  height: 250px;
+}
