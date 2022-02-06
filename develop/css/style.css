@@ -40,6 +40,7 @@ video {
 
 /* Video Background End */
 
+/* Main content styling*/
 body {
   color: var(--first-color);
   font-family: Arial, Helvetica, sans-serif;
@@ -65,37 +66,15 @@ section {
   margin-top: 30px;
 }
 
-/* select {
-  border-radius: 10px;
-  font-size: 15px;
-  padding: 5px;
-} */
-
-/* .row {
-  margin-top: 20px;
-} */
-
 #photo-buttons {
   margin: 15px;
   width: 100%;
 }
 
-#saturn-button {
-  margin-right: 25px;
-}
-
-#mars-button {
-  margin-right: 25px;
-}
-
-#stardust-button {
-  margin-right: 25px;
-}
-
-#sputnik-button {
-  margin-right: 25px;
-}
-
+#saturn-button,
+#mars-button,
+#stardust-button,
+#sputnik-button,
 #jupiter-button {
   margin-right: 25px;
 }
@@ -109,4 +88,18 @@ section {
 
 #vessel iframe {
   height: 250px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 575px) {
+  #vessel audio,
+  #vessel iframe,
+  #vessel img {
+    width: 300px;
+  }
+
+  #vessel iframe {
+    height: 150px;
+  }
 }
