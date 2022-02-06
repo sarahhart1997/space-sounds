@@ -51,24 +51,11 @@ header {
   padding: 10px;
 }
 
-/* #header-background {
-  width: 100%;
-  height: auto;
-  background: url("../photos/planets.jpg")
-} */
-
 .logo {
-  position: fixed;    
+  position: fixed;
   top: 0;
   left: 0;
 }
-/* header img {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  margin-bottom: 20px;
-  margin-left: 330px;
-} */
 
 main {
   position: absolute;
@@ -87,11 +74,6 @@ select {
 .row {
   margin-top: 20px;
 }
-
-/* Buttons Style */
-/* button {
-  background-color: white;
-} */
 
 #photo-buttons {
   margin: 15px;
@@ -123,39 +105,16 @@ audio {
   width: 400px;
 }
 
-/* https://codepen.io/agoodwin/pen/NMJoER */
-
-/* .background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+/* header img {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 20px;
+  margin-left: 330px;
 } */
 
-/* .stars {
-  background: black
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  z-index: 0;
-}
-
-.twinkling {
-  width: 10000px;
-  height: 100%;
-  background: transparent
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
-    repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 2;
+/* #header-background {
+  width: 100%;
+  height: auto;
+  background: url("../photos/planets.jpg")
 } */
-
